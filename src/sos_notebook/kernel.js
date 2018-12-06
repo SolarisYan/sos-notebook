@@ -551,6 +551,10 @@ define([
           <span>Index</span></br>
           <pre>#<span id="workflow_index_${cell_id}">${info.index}</span></pre>
         </td>
+        <td class="workflow_task_status">
+          <span id="task_${cell_id}">Tasks</span></br>
+          <pre><i class="fa fa-fw fa-refresh"></i><i class="fa fa-fw fa-stop"></i><i class="fa fa-fw fa-remove"></i></pre>
+        </td>
         <td class="workflow_status">
           <span id="status_text_${cell_id}">${info.status}</span></br>
           <pre><i class="fa fa-fw fa-clock-o"></i><time id="status_duration_${cell_id}" class="${info.status}" datetime="${info.start_time}">${timer_text}</time></pre>
@@ -1977,11 +1981,18 @@ td.task_icon {
     font-size: 0.75em;
 }
 
-td.task_status,
+td.task_status
 {
   width: 15em;
   text-align: left;
 }
+
+td.workflow_task_status
+{
+  width: 10em;
+  text-align: left;
+}
+
 
 table.workflow_table span {
   text-transform: uppercase;
